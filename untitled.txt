@@ -1,0 +1,29 @@
+Elastic :
+- Templates
+- Docs 
+- Update docs 
+
+Flask
+
+How to add new fields ? 
+
+
+Update category dictionnary in choices.py
+
+Ex :
+
+   { "healthcare" : 
+        {"name": "Etablissement de santé",
+         "category" : ["Clinique", "Pharmacie", "Hopitaux"]
+         }
+
+
+         }
+
+
+Converter : Update the item translator dictionnary in converter.py
+
+item_translator = { "healthcare0" : "Hopital", "healthcare1": "Pharmacie", "healthcare2": "Cabinet Médical et Clinique","charging_station": "charging_station"}
+
+nomenclature -> name of the category should be the same of what you have in elastic search + incremental number depending on the number. Ex :  "healthcare0" : "Hopital"
+
