@@ -1,0 +1,16 @@
+1. Installer docker https://docs.docker.com/get-docker/
+
+2. Création environnement virtuel :
+$pip install virtualenv
+$virtualenv your_virtual_env_name
+
+3. Activation environnement virtuel
+$source /root/memoirevenv/maevenv/bin/activate
+$source your_path_to_venv/bin/activate
+
+$python -m pip install pandas==1.4.3 notebook==6.3.0 elasticsearch==8.3.3
+
+
+3. Lancer le cluster :
+
+$docker run --rm -p 9200:9200 -p 9300:9300 -e "xpack.security.enabled=false" -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.3.3
